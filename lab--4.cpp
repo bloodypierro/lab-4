@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    // Пункт 1: Массив
+    
     int mas[7];
 
     cout << "Enter 7 numbers: ";
@@ -10,7 +10,7 @@ int main() {
         cin >> mas[i];
     }
 
-    // Проверка деления на 5
+    
     bool ok = true;
     for (int i = 0; i < 7; i++) {
         if (mas[i] % 5 != 0) {
@@ -19,7 +19,7 @@ int main() {
         }
     }
 
-    // Сортировка
+   
     if (ok) {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6 - i; j++) {
@@ -41,7 +41,7 @@ int main() {
     }
     cout << endl;
 
-    // Пункт 2: Матрица
+    
     int tab[3][4];
 
     cout << "\nEnter 12 numbers for 3x4 table:\n";
@@ -51,7 +51,7 @@ int main() {
         }
     }
 
-    // Ищем столбец с минусами
+    
     int best_col = 0;
     int best_cnt = 0;
 
@@ -66,7 +66,7 @@ int main() {
         }
     }
 
-    // Меняем столбец
+    
     if (best_cnt > 0) {
         for (int i = 0; i < 3; i++) {
             tab[i][best_col] = -1;
@@ -74,7 +74,7 @@ int main() {
         cout << "Column " << best_col << " changed to -1\n";
     }
 
-    // Вывод
+   
     cout << "Result:\n";
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 4; j++) {
