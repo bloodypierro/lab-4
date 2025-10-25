@@ -52,7 +52,7 @@ int main() {
     }
 
     
-    int best_col = 0;
+    int best_col = -1; // Инициализируем как -1 (недопустимый индекс)
     int best_cnt = 0;
 
     for (int j = 0; j < 4; j++) {
@@ -67,11 +67,15 @@ int main() {
     }
 
     
-    if (best_cnt > 0) {
+    // Проверяем, что найден допустимый индекс столбца
+    if (best_col >= 0 && best_col < 4 && best_cnt > 0) {
         for (int i = 0; i < 3; i++) {
             tab[i][best_col] = -1;
         }
         cout << "Column " << best_col << " changed to -1\n";
+    }
+    else {
+        cout << "No column with negative numbers found or invalid column index\n";
     }
 
    
