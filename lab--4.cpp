@@ -1,11 +1,11 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
     // Пункт 1: Массив
     int mas[7];
 
-    cout << "Введите 7 чисел: ";
+    cout << "Enter 7 numbers: ";
     for (int i = 0; i < 7; i++) {
         cin >> mas[i];
     }
@@ -20,7 +20,7 @@ int main() {
     }
 
     // Сортировка
-    if (ok) { 
+    if (ok) {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6 - i; j++) {
                 if (mas[j] > mas[j + 1]) {
@@ -30,10 +30,10 @@ int main() {
                 }
             }
         }
-        cout << "Отсортировано: ";
+        cout << "Sorted: ";
     }
     else {
-        cout << "Без изменений: ";
+        cout << "No changes: ";
     }
 
     for (int i = 0; i < 7; i++) {
@@ -44,7 +44,7 @@ int main() {
     // Пункт 2: Матрица
     int tab[3][4];
 
-    cout << "\nВведите 12 чисел для таблицы 3x4:\n";
+    cout << "\nEnter 12 numbers for 3x4 table:\n";
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 4; j++) {
             cin >> tab[i][j];
@@ -71,11 +71,11 @@ int main() {
         for (int i = 0; i < 3; i++) {
             tab[i][best_col] = -1;
         }
-        cout << "Столбец " << best_col << " стал -1\n";
+        cout << "Column " << best_col << " changed to -1\n";
     }
 
     // Вывод
-    cout << "Результат:\n";
+    cout << "Result:\n";
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 4; j++) {
             cout << tab[i][j] << " ";
